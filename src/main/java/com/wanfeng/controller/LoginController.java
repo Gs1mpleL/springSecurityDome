@@ -1,5 +1,6 @@
 package com.wanfeng.controller;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,6 +17,10 @@ public class LoginController {
         return "redirect:main.html";
     }
 
+    /**
+     * 必须有角色才能访问
+     */
+    @Secured("ROLE_abc")
     @RequestMapping("/tomain")
     public String tomain(){
         System.out.println("执行登录页面");
