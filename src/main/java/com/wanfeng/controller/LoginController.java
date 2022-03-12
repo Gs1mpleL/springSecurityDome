@@ -15,4 +15,10 @@ public class LoginController {
         System.out.println("执行登录页面");
         return "redirect:main.html";
     }
+
+    @RequestMapping("/tomain")
+    public String tomain(){
+        System.out.println("执行登录页面");
+        return "redirect:main.html";
+    }
 }

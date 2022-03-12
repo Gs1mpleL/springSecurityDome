@@ -29,7 +29,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
         // 模拟密码
         String psw = pw.encode("admin");
 
-        // 返回一个UserDetails实现类 需要账户密码和权限
-        return new User(username,psw, AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+        // 返回一个UserDetails实现类 需要账户密码和权限  ROlE_xxx中xxx就表示角色
+        return new User(username,psw, AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_abc"));
     }
 }
